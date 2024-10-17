@@ -1,0 +1,28 @@
+
+DEFAULT vesamenu.c32
+PROMPT 0
+TIMEOUT 300
+
+MENU TITLE PXE Boot Menu
+LABEL linux
+    MENU LABEL Boot Ubuntu 20.04
+    KERNEL /os_images/ubuntu/vmlinuz
+    INITRD /os_images/ubuntu/initrd.img
+    APPEND boot=live
+
+LABEL debian
+    MENU LABEL Boot Debian 10
+    KERNEL /os_images/debian/vmlinuz
+    INITRD /os_images/debian/initrd.img
+    APPEND boot=live
+
+LABEL kali
+    MENU LABEL Boot Kali Linux
+    KERNEL /os_images/kali/vmlinuz
+    INITRD /os_images/kali/initrd.img
+    APPEND boot=live
+
+LABEL windows10
+    MENU LABEL Boot Windows 10 PE
+    KERNEL /os_images/winpe/wimboot
+    INITRD /os_images/winpe/bootmgr.wim
